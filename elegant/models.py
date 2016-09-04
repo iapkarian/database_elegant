@@ -2,10 +2,10 @@ from django.db import models
 from django.utils import timezone
 
 class Client(models.Model):
-    name = models.CharField(max_length=100)
-    phone = models.IntegerField()
-    birth = models.DateField()
-    note = models.TextField(blank=True)
+    name = models.CharField('Прізвище', max_length=100)
+    phone = models.IntegerField('Телефон')
+    birth = models.DateField('Дата народження')
+    note = models.TextField('Рекомендації', blank=True)
 
     def __str__(self):
         return self.name
@@ -58,7 +58,7 @@ class Procedure_type(models.Model):
     consumable = models.IntegerField()
 
     def __str__(self):
-        return self.procedure_name
+        return str(self.procedure_name)
 
     class Meta:
         verbose_name = 'Вид процедури'
