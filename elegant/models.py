@@ -28,8 +28,8 @@ class Drug(models.Model):
 
 class Medication(models.Model):
     drug = models.ForeignKey(Drug)
-    data_start = models.DateField()
-    data_end = models.DateField()
+    data_start = models.DateField('Дата початку прийому')
+    data_end = models.DateField('Дата кiнця прийому')
     client = models.ForeignKey(Client)
 
     def __str__(self):
@@ -41,7 +41,7 @@ class Medication(models.Model):
 
 
 class Procedure_name(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField('Назва процедури', max_length=50)
 
     def __str__(self):
         return self.name
@@ -53,9 +53,9 @@ class Procedure_name(models.Model):
 
 class Procedure_type(models.Model):
     procedure_name = models.ForeignKey(Procedure_name)
-    prime_cost = models.IntegerField()
-    cost = models.IntegerField()
-    consumable = models.IntegerField()
+    prime_cost = models.IntegerField('Собiвартiсть')
+    cost = models.IntegerField('Вартысть для ')
+    consumable = models.IntegerField('')
 
     def __str__(self):
         return str(self.procedure_name)
@@ -67,8 +67,8 @@ class Procedure_type(models.Model):
 class Procedure(models.Model):
     client = models.ForeignKey(Client)
     procedure = models.ForeignKey(Procedure_type)
-    time_start = models.DateTimeField()
-    time_end = models.DateTimeField()
+    time_start = models.DateTimeField('Час початку')
+    time_end = models.DateTimeField('Час кiнця')
 
     def __str__(self):
         return self.client
