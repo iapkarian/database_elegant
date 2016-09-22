@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from django.utils import timezone
+from .models import Procedure
 
-# Create your views here.
+def client_list(request):
+    return render(request, 'elegant/client_list.html', {})

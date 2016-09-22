@@ -54,7 +54,7 @@ class Procedure_name(models.Model):
 class Procedure_type(models.Model):
     procedure_name = models.ForeignKey(Procedure_name)
     prime_cost = models.IntegerField('Собiвартiсть')
-    cost = models.IntegerField('Вартысть для ')
+    cost = models.IntegerField('Вартiсть для ')
     consumable = models.IntegerField('')
 
     def __str__(self):
