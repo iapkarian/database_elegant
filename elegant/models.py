@@ -4,7 +4,7 @@ from django.utils import timezone
 class Client(models.Model):
     name = models.CharField('Прізвище', max_length=100)
     phone = models.IntegerField('Телефон')
-    birth = models.DateField('Дата народження')
+    birth = models.DateField('Дата народження', )
     note = models.TextField('Рекомендації', blank=True)
 
     def __str__(self):
