@@ -48,7 +48,7 @@ class Procedure_name(models.Model):
 
     class Meta:
         verbose_name = 'Назва процедури'
-        verbose_name_plural = 'Назви процедур'
+        verbose_name_plural = 'Перелiк процедур'
 
 
 class Procedure_type(models.Model):
@@ -62,7 +62,7 @@ class Procedure_type(models.Model):
 
     class Meta:
         verbose_name = 'Вид процедури'
-        verbose_name_plural = 'Види процедур'
+        verbose_name_plural = 'Процедури (фiнанси)'
 
 class Procedure(models.Model):
     client = models.ForeignKey(Client)
@@ -75,4 +75,4 @@ class Procedure(models.Model):
 
     class Meta:
         verbose_name = 'Процедура'
-        verbose_name_plural = 'Процедури'
+        verbose_name_plural = 'Процедури (календар клієнтiв)'
