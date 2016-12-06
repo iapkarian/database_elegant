@@ -42,6 +42,8 @@ class Medication(models.Model):
 
 class Procedure_name(models.Model):
     name = models.CharField('Назва процедури', max_length=50)
+    # photo = models.ImageField('Фото', )
+    description = models.CharField('Опис процедури', max_length=500, blank=True, null=True)
 
     def __str__(self):
         return self.name

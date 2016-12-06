@@ -16,6 +16,3 @@ admin.site.register(Procedure_name)
 admin.site.unregister(User)
 admin.site.unregister(Group)
 
-
-
-# Register your models here.

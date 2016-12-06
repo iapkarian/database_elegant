@@ -1,22 +1,9 @@
 from django.shortcuts import render
-# from django.utils import timezone
-# from oauth2client.contrib import appengine
-
-# from .models import Procedure
-# import calendar
-
-
+from .forms import PostProcedure
 
 def client_list(request):
-    # c = calendar.Calendar()
-    return render(request, 'elegant/client_list.html')
+    return render(request, 'elegant/base.html')
 
-
-# decorator = appengine.OAuth2DecoratorFromClientSecrets(
-#     'client_secrets.json',
-#     scope='https://www.googleapis.com/auth/calendar')
-# class MainHandler(webapp.RequestHandler):
-#    @decorator.oauth_required
-#    def get(self):
-#      http = decorator.http()
-#      request = service.events().list(calendarId='primary')
+def procedure(request):
+    procedures = PostProcedure
+    return render(request, 'elegant/procedure.html', {'procedures': procedures})
