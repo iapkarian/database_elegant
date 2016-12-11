@@ -71,42 +71,57 @@
             <meta property="og:site_name" content="Сайт Елегант" />
             <meta property="og:locale" content="uk_UA" />
             <title>
-                {% block title %}Косметолог Гера Мирослава{% endblock title %}
+                {% block title %}Gera{% endblock title %}
             </title>
         </head>
         <body>
-        <div class="container">
+        <nav class="container">
             <header>
-                <a href="#"><img src="static/image/logo.png" alt=""></a>
-                <!--<div class="row above"></div>-->
-                <!--<div class="row middle">-->
-                    <!--<div class="wrapper-in">-->
-                        <!--<div class="title">-->
-                            <!--Косметолог <span class="sub-title">Гера Мирослава</span> Львiв-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
+                <div class="header content">
+                    <div class="left-col-header">
+                        <a href="#"><img src="static/image/logo.png" alt=""></a>
+                    </div>
+                    <div class="right-col-header">
+                        (096) 469 70 44 <br>
+                        (093) 728 39 97<br>
+                        <span>м.Львiв, просп.Червоної Калини</span>
+                    </div>
+                </div>
             </header>
 
-            <ul class="nav nav-pills">
-                <li><a href="#">Головна</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Процедури<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Косметологiя</a></li>
-                        <li><a href="#">Масаж</a></li>
-                        <li class="divider"></li>
+            <nav class="navbar navbar-default navbar-static-top" role="navigation">
+                <div class="container">
+                    <ul class="nav nav-pills">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Косметологiя обличчя<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Чистка</a></li>
+                                <li><a href="#">Пілінг</a></li>
+                                <li><a href="#">Масаж</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Мікродермабразія</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Косметологiя тiла<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Косметологiя</a></li>
+                                <li><a href="#">Масаж</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">111</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">Шугарiнг</a></li>
+                        <li><a href="#">Новини</a></li>
+                        <li><a href="#">Цiни</a></li>
+                        <li><a href="#">Вiдгуки</a></li>
+                        <li><a href="#">Контакти</a></li>
                     </ul>
-                </li>
-                <li><a href="#">Новини</a></li>
-                <li><a href="#">Цiни</a></li>
-                <li><a href="#">Контакти</a></li>
-            </ul>
-
+                </div>
+            </nav>
             <div class="row otstup">
                 <div class="col-md-2"></div>
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <!-- Маркеры слайдов -->
                         <ol class="carousel-indicators">
@@ -118,37 +133,26 @@
                     <!-- Содержимое слайдов -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="static/image/slider/1.png" alt="...">
-                            <div class="carousel-caption">
-                                <h3></h3>
-                                <p></p>
-                            </div>
+                            <img src="static/image/slider/1.jpg" alt="...">
                         </div>
 
-                        <!--<div class="item">-->
-                            <!--<img src="images/slider/2.jpg" alt="...">-->
-                            <!--<div class="carousel-caption">-->
-                                <!--<h3>Осень</h3>-->
-                                <!--<p>Осень — это вторая весна, когда каждый лист — цветок.</p>-->
-                            <!--</div>-->
-                        <!--</div>-->
+                        <div class="item">
+                            <img src="static/image/slider/2.jpg" alt="...">
+                        </div>
 
-                        <!--<div class="item">-->
-                            <!--<img src="images/slider/3.jpg" alt="...">-->
-                            <!--<div class="carousel-caption">-->
-                                <!--<h3>Дождь</h3>-->
-                                <!--<p>Осень опять идут дожди...</p>-->
-                        <!--</div>-->
+                        <div class="item">
+                            <img src="static/image/slider/3.jpg" alt="...">
+                        </div>
                     </div>
-                  </div>
 
-                  <!-- Controls -->
-                  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                      <span class="glyphicon glyphicon-chevron-left"></span>
-                  </a>
-                  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                      <span class="glyphicon glyphicon-chevron-right"></span>
-                  </a>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                    </div>
                 </div>
             </div>
         </div>
