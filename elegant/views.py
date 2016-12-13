@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import PostProcedure
+from elegant.forms import PostProcedure
 
 def client_list(request):
     return render(request, 'elegant/base.html')

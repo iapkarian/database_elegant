@@ -1,0 +1,13 @@
+{% extends 'elegant/base.html' %}
+{% block content %}
+    <h1>Процедури</h1>
+    {% for procedure in procedures %}
+        <div>
+            {{ procedure }}
+        </div>
+    {% endfor %}
+    <!--<form method="POST" class="post-form"> {% csrf_token %}-->
+        <!--{{ form.as_p }}-->
+    <!--</form>-->
+{% endblock %}
+
