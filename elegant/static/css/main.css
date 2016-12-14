@@ -22,11 +22,11 @@ header {
     margin-right: 50px;
 }
 
-.right-col-header {
+.center-col-header {
     text-align: right;
     color: #45254A;
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 40%;
     font-size: 18px;
 }
 
