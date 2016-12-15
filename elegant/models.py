@@ -73,7 +73,7 @@ class Procedure(models.Model):
     time_end = models.DateTimeField('Час кiнця')
 
     def __str__(self):
-        return self.client
+        return self.client.name
 
     class Meta:
         verbose_name = 'Процедура'
