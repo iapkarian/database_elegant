@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 class Client(models.Model):
     name = models.CharField('Прізвище', max_length=100)
     phone = models.IntegerField('Телефон')

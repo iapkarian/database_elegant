@@ -5,9 +5,16 @@ from elegant.models import Client, Drug, Medication
 from elegant.models import Procedure_name, Procedure_type, Procedure
 
 
-admin.site.register(Client)
+class ClientAdmin(admin.ModelAdmin):
+    search_fields = ['name']
+
+
+class ProcedureAdmin(admin.ModelAdmin):
+    list_filter = ('time_start',)
+
+admin.site.register(Client, ClientAdmin)
 admin.site.register(Medication)
-admin.site.register(Procedure)
+admin.site.register(Procedure, ProcedureAdmin)
 admin.site.register(Drug)
 admin.site.register(Procedure_type)
 admin.site.register(Procedure_name)
