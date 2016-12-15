@@ -1,0 +1,161 @@
+{% extends 'elegant/base.html' %}{% load static %}
+{% block head %}
+    {{ block.super }}<link rel="stylesheet" href="{% static 'css/price.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="h2-title" style="text-align:center;">
+            Цiни на послуги
+        </div>
+    </div>
+
+    <div class="row">
+        <span style="font-size:13px; color:#333333;">Консультація лікаря-косметолога 100 грн. </span>
+        <div class="h3-title">
+            Косметологiя обличчя
+        </div>
+        <table class="tftable" border="1">
+            <tr>
+                <th>Назва процедури </th>
+                <th style="width:20%">Тривалiсть, хв</th>
+                <th style="width:20%">Цiна, грн</th>
+            </tr>
+            <tr>
+                <td>Чистка обличчя мануальна</td>
+                <td>90-120 хв</td><td>300грн</td>
+            </tr>
+            <tr>
+                <td>Чистка обличчя комбінована</td>
+                <td>120 хв</td>
+                <td>450 грн</td>
+            </tr>
+            <tr>
+                <td>УЗ-чистка обличя</td>
+                <td>30 хв</td>
+                <td>300 грн</td>
+            </tr>
+            <tr>
+                <td>Атравматична чистка «Comodex»</td>
+                <td>60 хв</td>
+                <td>200 грн</td>
+            </tr>
+            <tr>
+                <td>Алмазна мікродермабразія</td>
+                <td></td><td>600 грн</td>
+            </tr>
+            <tr>
+                <td>Масаж обличчя і декольте</td>
+                <td>15-20 хв</td><td>100 грн</td>
+            </tr>
+            <tr>
+                <td>Кріомасаж рідким азотом</td>
+                <td>15-20 хв</td><td>100 грн</td>
+            </tr>
+            <tr>
+                <td>Програма Антикупероз</td>
+                <td>40 хв</td><td>300 грн</td>
+            </tr>
+            <tr>
+                <td>УЗ ліфтинг з гіалуроновою кислотою</td>
+                <td>40 хв</td><td>300 грн</td>
+            </tr>
+            <tr>
+                <td>Кораловий пілінг</td>
+                <td>40 хв</td><td>460 грн</td>
+            </tr>
+            <tr>
+                <td>Гліколевий пілінг 50%</td>
+                <td>40 хв</td><td>300 грн</td>
+            </tr>
+            <tr>
+                <td>ТСА 10-20%</td>
+                <td>30-40 хв</td><td>300 грн</td>
+            </tr>
+            <tr>
+                <td>Фруктовий препілінг</td>
+                <td>40 хв</td><td>200 грн</td>
+            </tr>
+            <tr>
+                <td>Пілінг Джесснера</td>
+                <td></td><td>300 грн</td>
+            </tr>
+        </table>
+    </div>
+    <div class="row">
+        <div class="h3-title">
+            Косметологiя тiла
+        </div>
+
+        <table class="tftable" border="1">
+            <tr>
+                <th>Назва процедури </th>
+                <th style="width:20%">Тривалiсть, хв</th>
+                <th style="width:20%">Цiна, грн</th>
+            </tr>
+            <tr>
+                <td>Оздоровчий масаж (дорослий)</td>
+                <td>30 хв</td><td>150 грн</td>
+            </tr>
+            <tr>
+                <td>Антицелюлітний вакуумний масаж з кріо/термо гелем</td>
+                <td>60 хв</td><td>150 грн</td>
+            </tr>
+            <tr>
+                <td>Мезотерапія по тілу</td>
+                <td></td><td></td>
+            </tr>
+        </table>
+    </div>
+    <div class="row">
+        <div class="h3-title">
+            Шугарiнг
+        </div>
+        <table class="tftable" border="1">
+            <tr>
+                <th>Назва процедури </th>
+                <th style="width:20%">Тривалiсть, хв</th>
+                <th style="width:20%">Цiна, грн</th>
+            </tr>
+            <tr>
+                <td>Глибоке бікіні</td>
+                <td></td><td>200-300 грн</td>
+            </tr>
+            <tr>
+                <td>Бікіні середнє</td>
+                <td></td><td>150 грн</td>
+            </tr>
+            <tr>
+                <td>Класичне бікіні</td>
+                <td></td><td>100 грн</td>
+            </tr>
+            <tr>
+                <td>Ноги повністю</td>
+                <td></td><td>300-400 грн</td>
+            </tr>
+            <tr>
+                <td>Ноги до колін</td>
+                <td></td><td>150-250 грн</td>
+            </tr>
+            <tr>
+                <td>Руки повністю</td>
+                <td></td><td>200-300 грн</td>
+            </tr>
+            <tr>
+                <td>Руки до ліктя</td>
+                <td></td><td>150-200 грн</td>
+            </tr>
+            <tr>
+                <td>Під пашками</td>
+                <td></td><td>60 грн</td>
+            </tr>
+            <tr>
+                <td>Верхня губа</td>
+                <td></td><td>30 грн</td>
+            </tr>
+            <tr>
+                <td>Доріжка (живіт)</td>
+                <td></td><td>30 грн</td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

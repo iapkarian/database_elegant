@@ -1,0 +1,44 @@
+.h3-title{
+    color: #73305B;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.tftable {
+    font-size:20px;
+    color:#333333;
+    width:70%;
+    border-width: 1px;
+    border-color: #729ea5;
+    border-collapse: collapse;
+}
+
+.tftable th {
+    font-size:13px;
+    background-color:#BDC4B2;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #BDC4B2;
+    text-align:left;
+}
+
+.tftable tr {
+    background-color:#ffffff;
+
+}
+
+.tftable td {
+    font-size:13px;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #E9E9E9;
+}
+
+.tftable tr:hover {
+    background-color:#ffff99;
+}

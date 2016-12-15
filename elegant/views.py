@@ -13,3 +13,7 @@ def procedure(request):
 
 def shugaring(request):
     return render(request, 'elegant/shugaring.html')
+
+
+def price(request):
+    return render(request, 'elegant/price.html')
