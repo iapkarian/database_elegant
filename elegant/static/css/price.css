@@ -1,6 +1,6 @@
 .h3-title{
     color: #73305B;
-    font-size: 16px;
+    font-size: 21px;
     font-style: italic;
     font-weight: bold;
     padding-top: 20px;
@@ -8,7 +8,7 @@
 }
 
 .tftable {
-    font-size:20px;
+    font-size: 25px;
     color:#333333;
     width:70%;
     border-width: 1px;
@@ -17,7 +17,7 @@
 }
 
 .tftable th {
-    font-size:13px;
+    font-size: 17px;
     background-color:#BDC4B2;
     border-width: 1px;
     padding: 8px;
@@ -32,7 +32,7 @@
 }
 
 .tftable td {
-    font-size:13px;
+    font-size:17px;
     border-width: 1px;
     padding: 8px;
     border-style: solid;
