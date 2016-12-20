@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.models import User, Group
 
-from elegant.models import Client, Drug, Medication
+from elegant.models import Client, Drug, Medication, News
 from elegant.models import Procedure_name, Procedure_type, Procedure
 
 
@@ -18,7 +18,7 @@ admin.site.register(Procedure, ProcedureAdmin)
 admin.site.register(Drug)
 admin.site.register(Procedure_type)
 admin.site.register(Procedure_name)
-
+admin.site.register(News)
 
 admin.site.unregister(User)
 admin.site.unregister(Group)
