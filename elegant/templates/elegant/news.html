@@ -1,0 +1,15 @@
+{% extends 'elegant/base.html' %}{% load static %}
+{% block content %}
+    <ul class="thumbnails">
+        {% for new1 in news %}
+            <li class="span4">
+                <div class="thumbnail">
+
+                    <img src="{{ new1.image_news }}" alt="">
+                    <h3>Ярлык миниатюры</h3>
+                    <p>{{ new1.title }}</p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

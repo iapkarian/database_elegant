@@ -17,3 +17,7 @@ def shugaring(request):
 
 def price(request):
     return render(request, 'elegant/price.html')
+
+
+def news(request):
+    return render(request, 'elegant/news.html')
