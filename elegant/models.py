@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 from django.utils import timezone
 
@@ -67,6 +69,7 @@ class Procedure_type(models.Model):
         verbose_name = 'Вид процедури'
         verbose_name_plural = 'Процедури (фiнанси)'
 
+
 class Procedure(models.Model):
     client = models.ForeignKey(Client)
     procedure = models.ForeignKey(Procedure_type)
@@ -79,3 +82,16 @@ class Procedure(models.Model):
     class Meta:
         verbose_name = 'Процедура'
         verbose_name_plural = 'Процедури (календар клієнтiв)'
+
+
+class News(models.Model):
+    title_news = models.CharField('Назва', max_length=50)
+    text_news = models.TextField('Опис', blank=True)
+    image_news = models.ImageField(upload_to='uploads/', null=True, blank=True)
+    created = models.DateTimeField('Дата розміщення', default=datetime.datetime.now)
+
+    def __str__(self):
+        return self.title_news
+
+    class Meta:
+        verbose_name_plural = 'Новини'
