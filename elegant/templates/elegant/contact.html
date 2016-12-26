@@ -1,0 +1,25 @@
+{% extends 'elegant/base.html' %}{% load static %}
+
+{% block content %}
+    <div class="row">
+        <h2>Google Map</h2>
+        <div id="map" style="width: 500px; height: 300px;"></div>
+    </div>
+
+
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(49.832594, 24.067654),
+    zoom: 17
+  }
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+
+{% endblock %}

@@ -21,3 +21,7 @@ def price(request):
 
 def news(request):
     return render(request, 'elegant/news.html')
+
+
+def contact(request):
+    return render(request, 'elegant/contact.html')

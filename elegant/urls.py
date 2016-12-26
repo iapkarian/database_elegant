@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^shugaring/$', views.shugaring, name='shugaring'),
     url(r'^price/$', views.price, name='price'),
     url(r'^news/$', views.news, name='news'),
+    url(r'^contact/$', views.contact, name='contact'),
 ]
