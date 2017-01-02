@@ -110,9 +110,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Elegant-b149281682f4.json.
 
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
 try:
     from database_elegant.settings_local import *
 except ImportError:
     pass
-
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
