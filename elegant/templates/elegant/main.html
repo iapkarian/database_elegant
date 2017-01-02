@@ -1,4 +1,5 @@
-{% extends 'elegant/base.html' %}{% load static %}
+{% extends 'elegant/base.html' %}
+{% load static from staticfiles %}
 
 {% block content %}
     <div class="row otstup">
@@ -63,7 +64,7 @@
 
     <div class="row" style="padding-left:15px; padding-right:15px;">
         <div style="padding: 25px; ">
-            <img src="static/image/logo.png" class="img-rounded center-block">
+            <img src="{% static '/image/logo.png' %}" class="img-rounded center-block">
         </div>
     </div>
 
@@ -73,42 +74,42 @@
         </div>
         <div class="col-xs-6 col-md-3">
             <div class="thumbnail">
-                <img src="static/image/catalog_main/masks.jpg" alt="Французькi альгінатнi маски Mila">
+                <img src="{% static 'image/catalog_main/masks.jpg' %}" alt="Французькi альгінатнi маски Mila">
             </div>
         </div>
         <div class="col-xs-6 col-md-3">
             <div class="thumbnail">
-                <img src="static/image/catalog_main/rose_de_mer.jpg" alt="Французькi альгінатнi маски Mila">
+                <img src="{% static 'image/catalog_main/rose_de_mer.jpg' %}" alt="Французькi альгінатнi маски Mila">
             </div>
         </div>
         <div class="col-xs-6 col-md-3">
             <div class="thumbnail">
-                <img src="static/image/catalog_main/depileve.jpg" alt="Французькi альгінатнi маски Mila">
+                <img src="{% static 'image/catalog_main/depileve.jpg' %}" alt="Французькi альгінатнi маски Mila">
             </div>
         </div>
         <div class="col-xs-6 col-md-3">
             <div class="thumbnail">
-                <img src="static/image/catalog_main/la_roche_posay.jpg" alt="Французькi альгінатнi маски Mila">
+                <img src="{% static 'image/catalog_main/la_roche_posay.jpg' %}" alt="Французькi альгінатнi маски Mila">
             </div>
         </div>
         <div class="col-xs-6 col-md-3">
             <div class="thumbnail">
-                <img src="static/image/catalog_main/peels-Brilace.jpg" alt="Французькi альгінатнi маски Mila">
+                <img src="{% static 'image/catalog_main/peels-Brilace.jpg' %}" alt="Французькi альгінатнi маски Mila">
             </div>
         </div>
         <div class="col-xs-6 col-md-3">
             <div class="thumbnail">
-                <img src="static/image/catalog_main/masks.jpg" alt="Французькi альгінатнi маски Mila">
+                <img src="{% static image/catalog_main/yantarika.jpg' %}" alt="">
             </div>
         </div>
         <div class="col-xs-6 col-md-3">
             <div class="thumbnail">
-                <img src="static/image/catalog_main/masks.jpg" alt="Французькi альгінатнi маски Mila">
+                <img src="{% static 'image/catalog_main/HL.jpg' %}">
             </div>
         </div>
         <div class="col-xs-6 col-md-3">
             <div class="thumbnail">
-                <img src="static/image/catalog_main/yantarika.jpg" alt="Французькi альгінатнi маски Mila">
+                <img src="{% static 'image/catalog_main/milo-piling.jpg' %}" alt="">
             </div>
         </div>
     </div>

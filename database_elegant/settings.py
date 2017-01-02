@@ -108,6 +108,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Elegant-b149281682f4.json.
 
 try:
-    from settings_local import *
+    from database_elegant.settings_local import *
 except ImportError:
     pass
+
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
