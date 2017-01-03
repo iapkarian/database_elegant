@@ -1,10 +1,20 @@
 .h3-title{
     color: #73305B;
-    font-size: 21px;
+    font-size: 200%;
     font-style: italic;
     font-weight: bold;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.qwe {
+    font-size: 125%;
+    color: #333333;
+}
+
+.qwe2 {
+    font-size: 13pt;
+    color: #333333;
 }
 
 .tftable {
