@@ -1,16 +1,72 @@
 {% extends 'elegant/base.html' %}{% load static from staticfiles %}
 {% block content %}
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="{% static 'image/slider/1.jpg' %}" alt="...">
-    </a>
-  </div>
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?136"></script>
+    <div class="row otstup">
+        <div class="col-md-2"></div>
+        <div class="col-md-12">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Маркеры слайдов -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  </ol>
 
-</div>
+            <!-- Содержимое слайдов -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="{% static 'image/slider/shugaring_1.jpg' %}" alt="...">
+                </div>
+
+                <div class="item">
+                    <img src="{% static 'image/slider/shugaring_2.jpg' %}" alt="...">
+                </div>
+
+                <div class="item">
+                    <img src="{% static 'image/slider/shugaring_3.jpg' %}" alt="...">
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="padding:15px;">
+        <div class="h2-title" style="text-align:center;">
+            Шугаринг
+        </div>
+        <p style="text-align:justify; float:left; width: 68%; font-size: 1.25em;">
+            Шугаринг (від англ. sugar - цукор) - це вид депіляції, який виконується густою цукровою пастою.
+            На оброблювану ділянку шкіри наноситься натуральна карамель і віддаляється разом з волосками.<br>
+            Цукрова депіляція одна з древніх косметологічних процедур, батьківщиною шугаринга вважається Стародавній
+            Єгипет. У Древній Персії шугаринг був досить популярний оскільки мати на тілі волосся вважалося непристойно.
+            Тому одно з назв процедури - персидська депіляція. У сучасному світі депіляція стала досить популярною
+            процедурою з середини 80-х років минулого століття.<br>
+            Це модна депіляція із суміші цукру. Вона є природною. Суміш із цукру не пошкодить навіть чутливішій шкірі.
+            Такий вид депіляції безпечний для людей з варикозним розширенням вен та схильністю до алергії. За допомогою
+            шугаринга видалити можна навіть волоски довжиною 2-3 мм. Не залишає опіків на шкірі. Ефект гладкості шкіри
+            триває близько місяця.<br>
+        </p>
+        <div style="float:right; width: 30%;">
+            <div id="vk_groups"></div>
+                <script type="text/javascript" style="border:10px solid red;">
+                    VK.Widgets.Group("vk_groups", {mode: 3, width: "220", color3: '45254A'}, 130598213);
+                </script>
+        </div>
 
 
-    <div class="catalog">
 
     </div>
+    <div class="row">
+        <p> Наш салон працює на професійній косметиці </p>
+
+    </div>
+
 {% endblock %}
