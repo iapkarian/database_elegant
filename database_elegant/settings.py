@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social.apps.django_app.default',
     'elegant',
 )
 
@@ -69,6 +70,13 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+
+    'social.apps.django_app.context_processors.backends',
+    'social.apps.django_app.context_processors.login_redirect',
+
+)
+
 WSGI_APPLICATION = 'database_elegant.wsgi.application'
 
 
@@ -98,6 +106,13 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Authentication
+AUTHENTICATION_BACKENDS = (
+    'social.backends.vk.VKOAuth2',
+    'social.backends.facebook.FacebookOAuth2',
+    'social.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend'
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
@@ -111,6 +126,27 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Elegant-b149281682f4.json.
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+SOCIAL_AUTH_VK_OAUTH2_KEY = '5816904'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'cW5GuHLGEtV6vG9g3i0e'
+SOCIAL_AUTH_LOGIN_URL = '/app/oauth2login'  # тут ваш url для калбека
+SOCIAL_AUTH_USER_MODEL = 'my.ProjectUser'  # ваша кастомная модель пользователя
+SOCIAL_AUTH_UID_LENGTH = 223
+SOCIAL_AUTH_STRATEGY = 'social.strategies.django_strategy.DjangoStrategy'
+SOCIAL_AUTH_STORAGE = 'social.apps.django_app.default.models.DjangoStorage'
+
+SOCIAL_AUTH_PIPELINE = (
+    'social.pipeline.social_auth.social_details',
+    'social.pipeline.social_auth.social_uid',
+    'social.pipeline.social_auth.auth_allowed',
+    'social.pipeline.social_auth.social_user',
+    'social.pipeline.user.get_username',
+    'my.social.save_profile',  # <--- тут наш метод, работающий с социальной авторизацией
+    'social.pipeline.social_auth.associate_user',
+    'social.pipeline.social_auth.load_extra_data',
+    'social.pipeline.user.user_details',
+)
 
 try:
     from database_elegant.settings_local import *

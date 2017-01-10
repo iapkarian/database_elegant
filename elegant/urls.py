@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 from elegant import views
 
 urlpatterns = [
@@ -8,4 +8,6 @@ urlpatterns = [
     url(r'^price/$', views.price, name='price'),
     url(r'^news/$', views.news, name='news'),
     url(r'^contact/$', views.contact, name='contact'),
+    url(r'^app/', include('social.apps.django_app.urls', namespace='social')),
+    url(r'^app/oauth2login$', 'my.social.oauth2login_view'),
 ]
