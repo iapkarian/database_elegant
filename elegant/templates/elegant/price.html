@@ -3,14 +3,14 @@
     {{ block.super }}<link rel="stylesheet" href="{% static 'css/price.css' %}">
 {% endblock %}
 {% block content %}
-    <div class="row" style="padding-left:15px; padding-right:15px;">
+    <div class="row">
         <div class="h2-title" style="text-align:center;">
             Цiни на послуги
         </div>
     </div>
 
-    <div class="row" style="padding-left:15px; padding-right:15px;">
-        <div class="qwe">
+    <div class="row">
+        <div style="font-size: 1.5rem; color: #333333; width:70%;">
             <span style="">Консультація лікаря-косметолога 100 грн. </span>
         </div>
 
@@ -101,7 +101,7 @@
         </table>
     </div>
 
-    <div class="row" style="padding-left:15px; padding-right:15px;">
+    <div class="row">
         <div class="h3-title">
             Косметологiя тiла
         </div>
@@ -126,7 +126,7 @@
         </table>
     </div>
 
-    <div class="row" style="padding-left:15px; padding-right:15px;">
+    <div class="row">
         <div class="h3-title">
             Шугарiнг
         </div>
@@ -177,11 +177,12 @@
                 <td>10 хв</td><td>30 грн</td>
             </tr>
         </table>
-        <div class="row" style="padding:15px;">
-            <span style="font-size: 17px; color: #333333;">
-                * Цiна та час процедур залежать від препарату і кількості
-            </span>
-        </div>
-
     </div>
+
+    <div class="row" style="padding-bottom:20px;">
+        <span style="font-size: 1.25rem; color: #333333;">
+            * Цiна та час процедур залежать від препарату і його кількості
+        </span>
+    </div>
+
 {% endblock %}

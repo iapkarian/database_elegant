@@ -8,10 +8,16 @@
         border-bottom-style: solid;
         border-bottom-color: #CCC;
     margin-bottom: 20px;
+    padding-top: 20px;
 }
 
 p {
     color: #0000;
+}
+
+.col-md-12{
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .pr-text {
