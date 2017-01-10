@@ -1,6 +1,6 @@
 .h2-title{
     color: #A64E98;
-    font-size: 25px;
+    font-size: 2.5rem;
     font-style: italic;
     font-weight: bold;
     border-bottom: 1px solid #CCC;
@@ -10,11 +10,13 @@
     margin-bottom: 20px;
 }
 
-
 p {
     color: #0000;
-
-
 }
 
-
+.pr-text {
+    font-size: 1.5rem;
+    text-align: justify;
+    float: left;
+    width: 68%;
+}
