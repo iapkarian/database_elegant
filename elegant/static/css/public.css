@@ -26,3 +26,11 @@ p {
     float: left;
     width: 68%;
 }
+
+
+.footer{
+    padding: 15px;
+    background-color: #A64E98;
+    text-align: center;
+    weight: 100%;
+}

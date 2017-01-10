@@ -89,18 +89,18 @@
                 <header>
                     <div class="header content">
                         <div class="left-col-header">
-                            <a href="/#"><img src="{% static 'image/logo.png' %}" alt=""></a>
+                            <a href="/#"><img src="{% static 'image/logo.png'%}"></a>
                         </div>
                         <div class="center-col-header">
-                            <table>
+                            <table style="width:100%">
                                 <tbody style="font-size: 2rem; text-align: center; color: #45254A;">
-                                    <td width="500">
+                                    <td style="width:50%">
                                         (096) 469 70 44<br>
                                         (093) 728 39 97<br>
                                         <span>м.Львiв, вул.Пасічна, 27</span>
 
                                     </td>
-                                    <td>
+                                    <td style="width:50%">
                                         <span>Час роботи:<br> пн-пт 9:00-17:00,<br> сб 13:00-20:00</span>
                                     </td>
                                 </tbody>
@@ -127,13 +127,16 @@
             {% block content %}
             {% endblock %}
 
-            <div class="row" style="padding:15px; background-color:#A64E98; text-align:center;">
-                <span style="color: white;">
-                    Copyright © 2012-2016 Медико-косметологiчний центр Gera.
-                </span>
-            </div>
+            <!--<div class="row" style="padding:15px; background-color:#A64E98; text-align:center;">-->
+
+            <!--</div>-->
         </div>
 
+        <div class="footer" >
+            <span style="color: white;">
+                    Copyright © 2012-2016 Медико-косметологiчний центр Gera.
+                </span>
+        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
         <script src="{% static 'js/bootstrap-dropdown.js' %}"></script>
