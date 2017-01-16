@@ -71,11 +71,18 @@ TEMPLATES = [
 ]
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.contrib.messages.context_processors.messages',
     'social.apps.django_app.context_processors.backends',
     'social.apps.django_app.context_processors.login_redirect',
-
 )
+
+LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'database_elegant.wsgi.application'
 
@@ -127,14 +134,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
-SOCIAL_AUTH_URL_NAMESPACE = 'social'
-SOCIAL_AUTH_VK_OAUTH2_KEY = '5816904'
-SOCIAL_AUTH_VK_OAUTH2_SECRET = 'cW5GuHLGEtV6vG9g3i0e'
-SOCIAL_AUTH_LOGIN_URL = '/app/oauth2login'  # тут ваш url для калбека
-SOCIAL_AUTH_USER_MODEL = 'my.ProjectUser'  # ваша кастомная модель пользователя
-SOCIAL_AUTH_UID_LENGTH = 223
-SOCIAL_AUTH_STRATEGY = 'social.strategies.django_strategy.DjangoStrategy'
-SOCIAL_AUTH_STORAGE = 'social.apps.django_app.default.models.DjangoStorage'
+SOCIAL_AUTH_FACEBOOK_KEY = '373835332979510'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'ae1a349bb4f585e7bf6b30cabfd5657b'
+
+# SOCIAL_AUTH_URL_NAMESPACE = 'social'
+# SOCIAL_AUTH_VK_OAUTH2_KEY = '5816904'
+# SOCIAL_AUTH_VK_OAUTH2_SECRET = 'cW5GuHLGEtV6vG9g3i0e'
+# SOCIAL_AUTH_UID_LENGTH = 223
+# SOCIAL_AUTH_STRATEGY = 'social.strategies.django_strategy.DjangoStrategy'
+# SOCIAL_AUTH_STORAGE = 'social.apps.django_app.default.models.DjangoStorage'
 
 SOCIAL_AUTH_PIPELINE = (
     'social.pipeline.social_auth.social_details',
@@ -142,7 +150,7 @@ SOCIAL_AUTH_PIPELINE = (
     'social.pipeline.social_auth.auth_allowed',
     'social.pipeline.social_auth.social_user',
     'social.pipeline.user.get_username',
-    'my.social.save_profile',  # <--- тут наш метод, работающий с социальной авторизацией
+
     'social.pipeline.social_auth.associate_user',
     'social.pipeline.social_auth.load_extra_data',
     'social.pipeline.user.user_details',
