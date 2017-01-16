@@ -140,6 +140,11 @@ SOCIAL_AUTH_FACEBOOK_SECRET = 'ae1a349bb4f585e7bf6b30cabfd5657b'
 # SOCIAL_AUTH_URL_NAMESPACE = 'social'
 # SOCIAL_AUTH_VK_OAUTH2_KEY = '5816904'
 # SOCIAL_AUTH_VK_OAUTH2_SECRET = 'cW5GuHLGEtV6vG9g3i0e'
+<<<<<<< HEAD
+=======
+# SOCIAL_AUTH_LOGIN_URL = '/app/oauth2login'  # тут ваш url для калбека
+# SOCIAL_AUTH_USER_MODEL = 'my.ProjectUser'  # ваша кастомная модель пользователя
+>>>>>>> master/master
 # SOCIAL_AUTH_UID_LENGTH = 223
 # SOCIAL_AUTH_STRATEGY = 'social.strategies.django_strategy.DjangoStrategy'
 # SOCIAL_AUTH_STORAGE = 'social.apps.django_app.default.models.DjangoStorage'

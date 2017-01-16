@@ -1,6 +1,9 @@
 from django.conf.urls import url, include
 from elegant import views
 
+from django.contrib import admin
+admin.autodiscover()
+
 urlpatterns = [
     url(r'^$', views.client_list, name='client_list'),
     url(r'^procedure/$', views.procedure, name='procedure'),
@@ -8,6 +11,7 @@ urlpatterns = [
     url(r'^price/$', views.price, name='price'),
     url(r'^news/$', views.news, name='news'),
     url(r'^contact/$', views.contact, name='contact'),
-    url(r'^app/', include('social.apps.django_app.urls', namespace='social')),
-    url(r'^app/oauth2login$', 'my.social.oauth2login_view'),
+    url('', include('social.apps.django_app.urls', namespace='social')),
+    url('', include('django.contrib.auth.urls', namespace='auth')),
+    # url(r'^app/oauth2login$', 'social.oauth2login_view'),
 ]
