@@ -11,7 +11,7 @@ urlpatterns = [
     url(r'^price/$', views.price, name='price'),
     url(r'^news/$', views.news, name='news'),
     url(r'^contact/$', views.contact, name='contact'),
-    url('', include('social.apps.django_app.urls', namespace='social')),
-    url('', include('django.contrib.auth.urls', namespace='auth')),
-    # url(r'^app/oauth2login$', 'social.oauth2login_view'),
+    # {# url('', include('social.apps.django_app.urls', namespace='social')), #}
+    # {# url('', include('django.contrib.auth.urls', namespace='auth')), #}
+    # # url(r'^app/oauth2login$', 'social.oauth2login_view'),
 ]
