@@ -10,7 +10,11 @@ class Client(models.Model):
     name = models.CharField('Прізвище', max_length=100)
     phone = models.IntegerField('Телефон')
     birth = models.DateField('Дата народження', )
-    note = models.TextField('Рекомендації', blank=True)
+    recommendation = models.TextField('Рекомендації', blank=True)
+    diagnosis = models.TextField('Дiагноз', max_length=100, blank=True, null=True)
+    complaint = models.TextField('Скарги', max_length=500, blank=True, null=True)
+    allergy = models.TextField('Алергiя', max_length=200, blank=True, null=True)
+    note = models.TextField('Примiтки', max_length=500, blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -48,7 +52,7 @@ class Medication(models.Model):
 class Procedure_name(models.Model):
     name = models.CharField('Назва процедури', max_length=50)
     # photo = models.ImageField('Фото', )
-    description = models.CharField('Опис процедури', max_length=500, blank=True, null=True)
+    description = models.TextField('Опис процедури', max_length=500, blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -97,3 +101,29 @@ class News(models.Model):
 
     class Meta:
         verbose_name_plural = 'Новини'
+
+
+class Price_category(models.Model):
+    num_category = models.IntegerField('Номер порядку: ')
+    category = models.CharField('Категорiя', max_length=20)
+
+    def __str__(self):
+        return self.category
+
+    class Meta:
+        verbose_name_plural = 'Категорії процедур'
+
+class Price(models.Model):
+    category = models.ForeignKey(Price_category)
+    name = models.CharField('Назва процедури', max_length=40)
+    duration = models.CharField('Тривалiсть', max_length=15)
+    price = models.CharField('Цiна', max_length=15)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = 'Цiни'
+
+
+
