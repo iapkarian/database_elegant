@@ -30,5 +30,9 @@ def news(request):
     return render(request, 'elegant/news.html')
 
 
+def comments(request):
+    return render(request, 'elegant/comments.html')
+
+
 def contact(request):
     return render(request, 'elegant/contact.html')

@@ -1,0 +1,10 @@
+{% extends 'elegant/base.html' %}{% load static from staticfiles %}
+
+{% block content %}
+
+<div id="vk_comments"></div>
+    <script type="text/javascript">
+        VK.Widgets.Comments("vk_comments", {limit: 10, width: "665", attach: "*"});
+    </script>
+
+{% endblock %}

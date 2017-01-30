@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^shugaring/$', views.shugaring, name='shugaring'),
     url(r'^price/$', views.price, name='price'),
     url(r'^news/$', views.news, name='news'),
+    url(r'^comments/$', views.comments, name='comments'),
     url(r'^contact/$', views.contact, name='contact'),
     url('', include('social.apps.django_app.urls', namespace='social')),
 
