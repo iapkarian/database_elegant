@@ -1,4 +1,6 @@
 from django.conf.urls import url, include
+from django.contrib.auth.views import logout
+
 from elegant import views
 
 from django.contrib import admin
@@ -13,6 +15,6 @@ urlpatterns = [
     url(r'^comments/$', views.comments, name='comments'),
     url(r'^contact/$', views.contact, name='contact'),
     url('', include('social.apps.django_app.urls', namespace='social')),
-
+    url(r'^logout/$', logout, {'next_page': '/'}, name='logout'),
 
 ]

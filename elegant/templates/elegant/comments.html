@@ -1,10 +1,19 @@
 {% extends 'elegant/base.html' %}{% load static from staticfiles %}
 
 {% block content %}
+<div class="row" style="padding-bottom:20px;">
+    <div style="float:left; width: 60%">
+        <div id="vk_comments"></div>
+        <script type="text/javascript">
+            VK.Widgets.Comments("vk_comments", {limit: 10, width: "665", attach: "*"});
+        </script>
+    </div>
 
-<div id="vk_comments"></div>
-    <script type="text/javascript">
-        VK.Widgets.Comments("vk_comments", {limit: 10, width: "665", attach: "*"});
-    </script>
+    <div style="float:right; width: 35%;">
+        <img src="{% static 'image/rek_mezoterapia.jpg'%}">
+    </div>
+</div>
+
+
 
 {% endblock %}

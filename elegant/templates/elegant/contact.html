@@ -2,6 +2,10 @@
 
 {% block content %}
 <div class="row">
+    <div id="vk_auth"></div>
+        <script type="text/javascript">
+            VK.Widgets.Auth('vk_auth', {});
+        </script>
     <h1>Third-party authentication demo</h1>
     <p>
         <ul>
@@ -29,7 +33,7 @@
         </ul>
      </p>
     <div>
-        {{ request.user.first_name }} {{ request.user.last_name }}
+        {{ request.user.first_name }} {{ request.user.last_name }} {{ request.user.photo_rec }}
     </div>
 </div>
 
