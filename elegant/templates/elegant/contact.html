@@ -2,52 +2,58 @@
 
 {% block content %}
 <div class="row">
-    <div id="vk_auth"></div>
-        <script type="text/javascript">
-            VK.Widgets.Auth('vk_auth', {});
-        </script>
-    <h1>Third-party authentication demo</h1>
-    <p>
+    <!--<div id="vk_auth"></div>-->
+        <!--<script type="text/javascript">-->
+            <!--VK.Widgets.Auth('vk_auth', {});-->
+        <!--</script>-->
+
         <ul>
         {# {% if user and not user.is_anonymous %} #}
             {# <li> #}
                 {# <a>Hello {{ user.get_full_name|default:user.username }}!</a> #}
             {# </li> #}
-            {# <li> #}
-                {# <a href="{% url 'auth:logout' %}?next={{ request.path }}">Logout</a> #}
-            {# </li> #}
         {# {% else %} #}
-
-            <li>
-                <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">Login with Google</a>
-            </li>
-            <li>
-                <a href="{% url 'social:begin' 'vk_oauth2' %}?next={{ request.path }}">Login with VK</a>
-            </li>
             {# <li> #}
                 {# <a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Login with Twitter</a> #}
             {# </li> #}
         {# {% endif %} #}
         </ul>
-     </p>
-    <div>
-        {{ request.user.first_name }} {{ request.user.last_name }} {{ request.user.photo_rec }}
-    </div>
 </div>
-
+<!--<div class="row">-->
+<h1> GGG</h1>
+<div id="map"></div>
+<!--</div>-->
 <script>
-function myMap() {
-  var mapCanvas = document.getElementById("map");
-  var mapOptions = {
-    center: new google.maps.LatLng(49.832594, 24.067654),
-    zoom: 17
+  function initMap() {
+    var u = {lat: 49.832594, lng: 24.067654};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: u
+    });
+    var marker = new google.maps.Marker({
+      position: u;
+      map: map
+    });
   }
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-
-}
+</script>
+<script
+    async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsCMMfNKrIIkmGisz1FBlHuj-C7T7wlqE&callback=initMap">
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+<!--<script>-->
+    <!--function myMap() {-->
+        <!--var mapCanvas = document.getElementById("map");-->
+        <!--var mapOptions = {-->
+        <!--center: new google.maps.LatLng(49.832594, 24.067654),-->
+        <!--zoom: 17,-->
+      <!--}-->
+        <!--var map = new google.maps.Map(mapCanvas, mapOptions);-->
+
+    <!--}-->
+<!--</script>-->
+
+<!--<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>-->
 
 
 {% endblock %}
