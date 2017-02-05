@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" style="padding-bottom:20px;">
         <div id="map"></div>
         <script>
             function initMap() {
@@ -44,13 +44,19 @@
             async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsCMMfNKrIIkmGisz1FBlHuj-C7T7wlqE&callback=initMap">
         </script>
+        <div id="adress">
+            <span>м.Львiв, вул.Пасічна, 27</span><br>
+            (096) 469 70 44<br>
+            (093) 728 39 97<br><br>
+            <img src="{% static 'image/logo.png'%}">
+        </div>
     </div>
 
-    <div class="row">
-        <div class="h2-title" style="text-align:left;">
-            Зворотнiй зв'язок
-        </div>
-        <div></div>
-    </div>
+    <!--<div class="row">-->
+        <!--<div class="h2-title" style="text-align:left;">-->
+            <!--Зворотнiй зв'язок-->
+        <!--</div>-->
+        <!--<div></div>-->
+    <!--</div>-->
 
 {% endblock %}

@@ -91,19 +91,26 @@
         <div class="container">
             <div class="row" style="margin-top: 5px;">
                 <div style="float: right;">
-
-                    {{ request.user.first_name }} {{ request.user.last_name }}
-
+                    {% if user and not user.is_anonymous %}
+                        <a>Hello {{ user.get_full_name|default:user.username }}!</a>
+                        {{ request.user.first_name }} {{ request.user.last_name }}
+                        <a href="{% url 'logout' %}">Вихiд</a>
+                    {% else %}
+                        <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">
+                        <img src="{% static 'image/fb_ico.png'%}"></a>
                     <!--<a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">-->
                         <!--<img src="{% static 'image/google_ico.png'%}"></a>-->
-                    <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">
-                        <img src="{% static 'image/fb_ico.png'%}"></a>
+
                     <!--<a href="{% url 'social:begin' 'vk_oauth2' %}?next={{ request.path }}">-->
                         <!--<img src="{% static 'image/vk_ico.png'%}"></a>-->
+                    <!--<a href="" target="_blank" onclick="window.open(this.href,this.target,'width= 300,height=300,scrollbars=1');return false;">Вхiд та реєстрація</a>-->
 
-                    <a href="" target="_blank" onclick="window.open(this.href,this.target,'width= 300,height=300,scrollbars=1');return false;">Вхiд та реєстрація</a>
-                    <a href="{% url 'logout' %}">Вихiд</a>
-                    <a href="{% url 'logout' %}?next={{ request.path }}">Logout</a>
+                    {% endif %}
+
+
+
+                    <!--<a href="" target="_blank" onclick="window.open(this.href,this.target,'width= 300,height=300,scrollbars=1');return false;">Вхiд та реєстрація</a>-->
+
                 </div>
 
             </div>
