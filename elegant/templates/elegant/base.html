@@ -94,12 +94,12 @@
 
                     {{ request.user.first_name }} {{ request.user.last_name }}
 
-                    <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">
-                        <img src="{% static 'image/google_ico.png'%}"></a>
+                    <!--<a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">-->
+                        <!--<img src="{% static 'image/google_ico.png'%}"></a>-->
                     <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">
                         <img src="{% static 'image/fb_ico.png'%}"></a>
-                    <a href="{% url 'social:begin' 'vk_oauth2' %}?next={{ request.path }}">
-                        <img src="{% static 'image/vk_ico.png'%}"></a>
+                    <!--<a href="{% url 'social:begin' 'vk_oauth2' %}?next={{ request.path }}">-->
+                        <!--<img src="{% static 'image/vk_ico.png'%}"></a>-->
 
                     <a href="" target="_blank" onclick="window.open(this.href,this.target,'width= 300,height=300,scrollbars=1');return false;">Вхiд та реєстрація</a>
                     <a href="{% url 'logout' %}">Вихiд</a>
@@ -135,9 +135,9 @@
                     <div class="container">
                         <ul class="nav nav-pills">
                             <li><a href="/#">Косметологiя обличчя</a></li>
-                            <li><a href="/#">Косметологiя тiла</a></li>
+                            <!--<li><a href="/#">Косметологiя тiла</a></li>-->
                             <li><a href="/shugaring">Шугаринг</a></li>
-                            <li><a href="/news">Новини</a></li>
+                            <!--<li><a href="/news">Новини</a></li>-->
                             <li><a href="/price">Цiни</a></li>
                             <li><a href="/comments">Вiдгуки</a></li>
                             <li><a href="/contact">Контакти</a></li>
