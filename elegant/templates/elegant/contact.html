@@ -1,7 +1,7 @@
 {% extends 'elegant/base.html' %}{% load static from staticfiles %}
 
 {% block content %}
-<div class="row">
+
     <!--<div id="vk_auth"></div>-->
         <!--<script type="text/javascript">-->
             <!--VK.Widgets.Auth('vk_auth', {});-->
@@ -18,42 +18,39 @@
             {# </li> #}
         {# {% endif %} #}
         </ul>
-</div>
-<!--<div class="row">-->
-<h1> GGG</h1>
-<div id="map"></div>
-<!--</div>-->
-<script>
-  function initMap() {
-    var u = {lat: 49.832594, lng: 24.067654};
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 15,
-      center: u
-    });
-    var marker = new google.maps.Marker({
-      position: u;
-      map: map
-    });
-  }
-</script>
-<script
-    async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsCMMfNKrIIkmGisz1FBlHuj-C7T7wlqE&callback=initMap">
-</script>
 
-<!--<script>-->
-    <!--function myMap() {-->
-        <!--var mapCanvas = document.getElementById("map");-->
-        <!--var mapOptions = {-->
-        <!--center: new google.maps.LatLng(49.832594, 24.067654),-->
-        <!--zoom: 17,-->
-      <!--}-->
-        <!--var map = new google.maps.Map(mapCanvas, mapOptions);-->
+    <div class="row">
+        <div class="h2-title" style="text-align:center;">
+            Контакти
+        </div>
+    </div>
 
-    <!--}-->
-<!--</script>-->
+    <div class="row">
+        <div id="map"></div>
+        <script>
+            function initMap() {
+                var u = {lat: 49.832594, lng: 24.067654};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 17,
+                    center: u
+                });
+                var marker = new google.maps.Marker({
+                    position: u,
+                    map: map
+                });
+            }
+        </script>
+        <script
+            async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsCMMfNKrIIkmGisz1FBlHuj-C7T7wlqE&callback=initMap">
+        </script>
+    </div>
 
-<!--<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>-->
-
+    <div class="row">
+        <div class="h2-title" style="text-align:left;">
+            Зворотнiй зв'язок
+        </div>
+        <div></div>
+    </div>
 
 {% endblock %}
