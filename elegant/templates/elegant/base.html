@@ -95,8 +95,9 @@
                         {{ request.user.first_name }} {{ request.user.last_name }}
                         <a href="{% url 'logout' %}">Вихiд</a>
                     {% else %}
-                        <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">
-                        <img src="{% static 'image/fb_ico.png'%}"></a>
+
+                        <!--<a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">-->
+                        <!--<img src="{% static 'image/fb_ico.png'%}"></a>-->
                     <!--<a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">-->
                         <!--<img src="{% static 'image/google_ico.png'%}"></a>-->
 
