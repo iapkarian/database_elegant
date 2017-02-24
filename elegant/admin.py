@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.admin import register
 from django.contrib.auth.models import User, Group
 
-from elegant.models import Client, Drug, Medication, News
+from elegant.models import Client, Drug, Medication, News, News_section
 from elegant.models import Procedure_name, Procedure_type, Procedure
 from elegant.models import Price_category, Price
 
@@ -20,6 +20,7 @@ admin.site.register(Drug)
 admin.site.register(Procedure_type)
 admin.site.register(Procedure_name)
 admin.site.register(News)
+admin.site.register(News_section)
 
 admin.site.unregister(User)
 admin.site.unregister(Group)

@@ -3,6 +3,8 @@ from elegant.forms import PostProcedure
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 
+from .models import News
+
 
 def home(request):
    context = RequestContext(request, {'request': request, 'user': request.user})
@@ -27,7 +29,8 @@ def price(request):
 
 
 def news(request):
-    return render(request, 'elegant/news.html')
+    posts = News.objects.filter()
+    return render(request, 'elegant/news.html', {'posts': posts})
 
 
 def comments(request):

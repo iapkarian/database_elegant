@@ -1,15 +1,20 @@
 {% extends 'elegant/base.html' %}{% load static from staticfiles %}
 {% block content %}
-    <ul class="thumbnails">
-        {% for new1 in news %}
-            <li class="span4">
-                <div class="thumbnail">
 
-                    <img src="{{ new1.image_news }}" alt="">
-                    <h3>Ярлык миниатюры</h3>
-                    <p>{{ new1.title }}</p>
-                </div>
-            </li>
+    <div class="row">
+        <div class = "col-xs-12 col-md-2" style="padding-left:0; ">
+            <ul class="nav nav-tabs nav-stacked">
+                <li><a href="#">Sale</a></li>
+                <li><a href="#">Акції</a></li>
+                <li><a href="#">Новини</a></li>
+                <li><a href="#">Догляд</a></li>
+            </ul>
+        </div>
+
+        {% for post in posts %}
+            <h1>{{ post.title_news }}</h1>
+            <img src="{{ post.image_news.url }}">
         {% endfor %}
-    </ul>
+    </div>
+
 {% endblock %}

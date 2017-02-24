@@ -90,7 +90,18 @@ class Procedure(models.Model):
         verbose_name_plural = 'Процедури (календар клієнтiв)'
 
 
+class News_section(models.Model):
+    name = models.CharField('Назва', max_length=20)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = 'Новини(роздiли)'
+
+
 class News(models.Model):
+    section = models.ForeignKey(News_section)
     title_news = models.CharField('Назва', max_length=50)
     text_news = models.TextField('Опис', blank=True)
     image_news = models.ImageField(upload_to='uploads/', null=True, blank=True)
