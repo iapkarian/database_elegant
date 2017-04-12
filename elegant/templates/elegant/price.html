@@ -24,6 +24,25 @@
                 <th style="width:20%">Цiна</th>
             </tr>
 
+            {% for item in data %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.duration }}</td>
+                <td>{{ item.price }}</td>
+            </tr>
+            {%  endfor %}
+
+
+        <div class="h3-title">
+            Косметологiя обличчя
+        </div>
+        <table class="tftable" border="1">
+            <tr>
+                <th>Назва процедури </th>
+                <th style="width:20%">Тривалiсть</th>
+                <th style="width:20%">Цiна</th>
+            </tr>
+
 
             <tr>
                 <td>Чистка обличчя мануальна</td>
