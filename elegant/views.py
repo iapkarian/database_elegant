@@ -22,6 +22,8 @@ def procedure(request):
 
 
 
+
+
 def shugaring(request):
     return render(request, 'elegant/shugaring.html')
 
