@@ -19,23 +19,13 @@
                 Косметологiя обличчя
             </div>
             <table class="tftable" border="1">
-            <tr>
-                <th>Назва процедури </th>
-                <th style="width:20%">Тривалiсть</th>
-                <th style="width:20%">Цiна</th>
-            </tr></table>
-
-            <div class="h3-title">
-                Косметологiя обличчя
-            </div>
-            <table class="tftable" border="1">
                 <tbody>
                     <tr>
                         <th>Назва процедури </th>
                         <th style="width:20%">Тривалiсть</th>
                         <th style="width:20%">Цiна</th>
                     </tr>
-                    {% for item in data %}
+                    {% for item in data_face %}
                         <tr>
                             <td>{{ item.name }}</td>
                             <td>{{ item.duration }} хв</td>
@@ -44,8 +34,6 @@
                     {% endfor %}
                 </tbody>
             </table>
-
-
 
         <div class="h3-title">
             Косметологiя обличчя
@@ -147,11 +135,12 @@
             </tr>
         </table>
         </div>
-        <div style="float:right; width:30%;">
-            <figure><img alt="" src="{% static 'image/rek_mezoterapia.jpg' %}">
-                <figcaption>Описание под изображением которое может содержать много текста</figcaption>
-            </figure>
-        </div>
+
+{#        <div style="float:right; width:30%;">#}
+{#            <figure><img alt="" src="{% static 'image/rek_mezoterapia.jpg' %}">#}
+{#                <figcaption>Описание под изображением которое может содержать много текста</figcaption>#}
+{#            </figure>#}
+{#        </div>#}
     </div>
 
     <div class="row">
