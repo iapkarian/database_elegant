@@ -7,6 +7,17 @@
     padding-bottom: 20px;
 }
 
+figure{
+    display:table;
+    width:1%;
+    padding:0; margin:0 0 12px 0px; border:none;
+}
+figcaption{
+    display:block; padding:3px 6px 7px 6px; margin:0; border:none;
+    text-align:center;
+}
+figure img{ display:block; padding:0; margin:0; border:none; }
+
 .qwe {
     font-size: 1.5rem;
     color: #333333;
