@@ -124,11 +124,18 @@ class Price_category(models.Model):
     class Meta:
         verbose_name_plural = 'Категорії процедур'
 
+
 class Price(models.Model):
     category = models.ForeignKey(Price_category)
     name = models.CharField('Назва процедури', max_length=40)
-    duration = models.CharField('Тривалiсть', max_length=15)
-    price = models.CharField('Цiна', max_length=15)
+    duration = models.PositiveIntegerField('Тривалiсть', max_length=15)
+    price = models.PositiveIntegerField('Цiна', max_length=15)
+    CURRENCY_CHOICES = (
+        ('грн', 'UAH',),
+        ('$', 'USD', ),
+        ('€', 'EUR',),
+    )
+    currency = models.CharField('Валюта', max_length=5, choices=CURRENCY_CHOICES, blank=True, null=True)
 
     def __str__(self):
         return self.name

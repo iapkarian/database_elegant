@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 
 from .models import News
+from elegant.models import Price
 
 
 def home(request):
@@ -25,7 +26,12 @@ def shugaring(request):
 
 
 def price(request):
-    return render(request, 'elegant/price.html')
+
+    data = Price.objects.all()
+
+
+    return render(request, 'elegant/price.html',
+                  dict(data=data))
 
 
 def news(request):

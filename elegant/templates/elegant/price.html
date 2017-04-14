@@ -14,23 +14,27 @@
             <span style="">Консультація лікаря-косметолога 100 грн. </span>
         </div>
 
-        <div class="h3-title">
-            Косметологiя обличчя
-        </div>
-        <table class="tftable" border="1">
-            <tr>
-                <th>Назва процедури </th>
-                <th style="width:20%">Тривалiсть</th>
-                <th style="width:20%">Цiна</th>
-            </tr>
 
-            {% for item in data %}
-            <tr>
-                <td>{{ item.name }}</td>
-                <td>{{ item.duration }}</td>
-                <td>{{ item.price }}</td>
-            </tr>
-            {%  endfor %}
+            <div class="h3-title">
+                Косметологiя обличчя
+            </div>
+            <table class="tftable" border="1">
+                <tbody>
+                    <tr>
+                        <th>Назва процедури </th>
+                        <th style="width:20%">Тривалiсть</th>
+                        <th style="width:20%">Цiна</th>
+                    </tr>
+                    {% for item in data %}
+                        <tr>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.duration }} хв</td>
+                            <td>{{ item.price }} {{ item.currency }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
 
 
         <div class="h3-title">

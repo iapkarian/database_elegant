@@ -1,5 +1,5 @@
 #Django==1.10.5
 #PyPDF2==1.26.0
-social-auth-app-django
-python-social-auth
+#social-auth-app-django
+#python-social-auth
 #social-django

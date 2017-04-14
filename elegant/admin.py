@@ -25,5 +25,6 @@ admin.site.register(News_section)
 admin.site.unregister(User)
 admin.site.unregister(Group)
 
+admin.site.register(Price_category)
 admin.site.register(Price)
 
