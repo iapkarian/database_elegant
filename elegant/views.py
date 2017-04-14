@@ -20,6 +20,8 @@ def procedure(request):
     return render(request, 'elegant/procedure.html', {'procedures': procedures})
 
 
+
+
 def shugaring(request):
     return render(request, 'elegant/shugaring.html')
 
