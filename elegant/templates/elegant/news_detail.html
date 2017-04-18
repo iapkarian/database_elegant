@@ -1,0 +1,9 @@
+{% extends 'elegant/base.html' %}{% load static from staticfiles %}
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% block content %}
+    <div class="row">
+
+        {{ post.text_news }}
+    </div>
+
+{% endblock %}

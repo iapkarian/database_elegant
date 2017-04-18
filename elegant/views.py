@@ -1,13 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from elegant.forms import PostProcedure
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
-from itertools import groupby
-
-from elegant.utils import check_permission
-from .models import News, Price_category
+from .models import News
 from elegant.models import Price
+
+
+def news_detail(request, pk):
+
+    post = get_object_or_404(News, pk=pk)
+
+    return render(request, 'elegant/news_detail.html', {'post': post})
 
 
 def home(request):
@@ -38,13 +43,30 @@ def price(request):
 
 def news(request):
     posts = News.objects.all()
+    paginator = Paginator(posts, 2)
+    page = request.GET.get('page')
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages)
 
-    return render(request, 'elegant/news.html',
-                  dict(posts=posts))
+    return render(request, 'elegant/news.html',  {'posts': posts})
 
 
 def news_sale(request):
+    # if request.GET.get('news_sale'):
     posts = News.objects.filter(section__name='Sale')
+
+    paginator = Paginator(posts, 2)
+    page = request.GET.get('page')
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages)
 
     return render(request, 'elegant/news.html',
                   dict(posts=posts))

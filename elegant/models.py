@@ -113,6 +113,8 @@ class News(models.Model):
     class Meta:
         verbose_name_plural = 'Новини'
 
+    def get_absolute_url(self):
+        return "/news/%i/" % self.id
 
 class Price_category(models.Model):
     num_category = models.IntegerField('Номер порядку: ')
