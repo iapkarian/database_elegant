@@ -8,13 +8,6 @@ from .models import News
 from elegant.models import Price
 
 
-def news_detail(request, pk):
-
-    post = get_object_or_404(News, pk=pk)
-
-    return render(request, 'elegant/news_detail.html', {'post': post})
-
-
 def home(request):
     context = RequestContext(request, {'request': request, 'user': request.user})
 
@@ -39,6 +32,12 @@ def price(request):
 
     return render(request, 'elegant/price.html',
                   dict(data=data))
+
+
+def news_detail(request, pk):
+    post = get_object_or_404(News, pk=pk)
+
+    return render(request, 'elegant/news_detail.html', {'post': post})
 
 
 def news(request):
@@ -91,16 +90,6 @@ def news_care(request):
 
     return render(request, 'elegant/news.html',
                   dict(posts=posts))
-
-
-def post(request):
-    posts = News.objects.filter(request.GET)
-
-    if request.method == 'GET':
-        if "post_print" in request.GET:
-            pass
-
-    return render(request, 'elegant/news.html', dict(posts=posts))
 
 
 def comments(request):

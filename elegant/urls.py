@@ -21,9 +21,7 @@ urlpatterns = [
     url(r'^news/novelty/$', views.news_novelty, name='news_novelty'),
     url(r'^news/care/$', views.news_care, name='news_care'),
 
-    # url(r'^news/$', views.PostsListView.as_view(), name='list'),
     url(r'^news/(?P<pk>\d+)/$', views.news_detail, name='news_detail'),
-
 
     url(r'^comments/$', views.comments, name='comments'),
     url(r'^contact/$', views.contact, name='contact'),

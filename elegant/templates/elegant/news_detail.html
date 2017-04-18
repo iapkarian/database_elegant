@@ -1,9 +1,33 @@
 {% extends 'elegant/base.html' %}{% load static from staticfiles %}
 <link rel="stylesheet" href="{% static 'css/news.css' %}">
 {% block content %}
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
     <div class="row">
-
-        {{ post.text_news }}
+        <div class="h2-title" style="text-align:center;">
+            {{ post.title_news }}
+        </div>
     </div>
-
+    <div class="row">
+        <img class="col-md-2" src="{{ post.image_news.url }}">
+        {{ post.created }} <br>
+        <p class="pr-text">
+        {{ post.text_news }}
+        </p>
+    </div>
+    <div class="row" style="padding-bottom: 10px;">
+        <div class="fb-share-button" data-href="https://gera.org.ua/news_detail.html" data-layout="button" data-size="small" data-mobile-iframe="true">
+            <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgera.org.ua%2F&amp;src=sdkpreparse">Поделиться</a>
+        </div>
+        <script type="text/javascript"><!--
+        document.write(VK.Share.button(false,{type: "round_nocount", text: "Поделиться"}));
+        --></script>
+    </div>
 {% endblock %}
