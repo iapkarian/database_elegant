@@ -3,8 +3,10 @@ from elegant.forms import PostProcedure
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 
+from itertools import groupby
+
 from elegant.utils import check_permission
-from .models import News
+from .models import News, Price_category
 from elegant.models import Price
 
 
@@ -28,12 +30,10 @@ def shugaring(request):
 
 
 def price(request):
-    data_shug = Price.objects.filter(category__category='Шугарiнг')
-    data_face = Price.objects.filter(category__category='Косметологiя обличчя')
-    data_body = Price.objects.filter(category__category='Косметологiя тiла')
+    data = Price.objects.select_related('category')
 
     return render(request, 'elegant/price.html',
-                  dict(data_shug=data_shug, data_face=data_face, data_body=data_body))
+                  dict(data=data))
 
 
 def news(request):

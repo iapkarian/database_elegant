@@ -15,9 +15,13 @@
                 <span style="">Консультація лікаря-косметолога 100 грн. </span>
             </div>
 
+            {% regroup data by category as category_list %}
+
+            {% for category in category_list %}
             <div class="h3-title">
-                Косметологiя обличчя
+                {{ category.grouper }}
             </div>
+
             <table class="tftable" border="1">
                 <tbody>
                     <tr>
@@ -25,7 +29,7 @@
                         <th style="width:20%">Тривалiсть</th>
                         <th style="width:20%">Цiна</th>
                     </tr>
-                    {% for item in data_face %}
+                    {% for item in category.list %}
                         <tr>
                             <td>{{ item.name }}</td>
                             <td>{{ item.duration }} хв</td>
@@ -34,6 +38,7 @@
                     {% endfor %}
                 </tbody>
             </table>
+            {% endfor %}
 
         <div class="h3-title">
             Косметологiя обличчя
