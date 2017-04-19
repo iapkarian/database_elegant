@@ -1,6 +1,8 @@
 {% extends 'elegant/base.html' %}{% load static from staticfiles %}
 <link rel="stylesheet" href="{% static 'css/news.css' %}">
 {% block content %}
+    <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script src="//yastatic.net/share2/share.js"></script>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -23,11 +25,9 @@
         </p>
     </div>
     <div class="row" style="padding-bottom: 10px;">
-        <div class="fb-share-button" data-href="https://gera.org.ua/news_detail.html" data-layout="button" data-size="small" data-mobile-iframe="true">
-            <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgera.org.ua%2F&amp;src=sdkpreparse">Поделиться</a>
+        <div class="col-md-2"></div>
+        <div>
+            <div class="ya-share2" data-services="vkontakte,facebook,gplus,twitter,viber,whatsapp,skype,telegram"></div>
         </div>
-        <script type="text/javascript"><!--
-        document.write(VK.Share.button(false,{type: "round_nocount", text: "Поделиться"}));
-        --></script>
     </div>
 {% endblock %}
