@@ -7,6 +7,10 @@ from elegant import views
 from elegant import ui
 
 from django.contrib import admin
+
+from elegant.ui.buch.credit import main as credit
+from elegant.ui.buch.debet import main as debet
+
 admin.autodiscover()
 
 urlpatterns = [
@@ -27,6 +31,10 @@ urlpatterns = [
     url(r'^contact/$', views.contact, name='contact'),
     url('', include('social.apps.django_app.urls', namespace='social')),
     url(r'^logout/$', logout, {'next_page': '/'}, name='logout'),
+
+    url(r'^debt/$', credit.in_procedure, name='debt'),
+    url(r'^credit/$', credit.in_procedure, name='credit'),
+    url(r'^debet/$', debet.in_procedure, name='debet'),
 
 ]
 
