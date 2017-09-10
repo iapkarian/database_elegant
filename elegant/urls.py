@@ -27,7 +27,6 @@ urlpatterns = [
 
     url(r'^news/(?P<pk>\d+)/$', views.news_detail, name='news_detail'),
 
-    url(r'^comments/$', views.comments, name='comments'),
     url(r'^contact/$', views.contact, name='contact'),
     url('', include('social.apps.django_app.urls', namespace='social')),
     url(r'^logout/$', logout, {'next_page': '/'}, name='logout'),

@@ -119,9 +119,5 @@ def news_care(request):
                   dict(posts=posts))
 
 
-def comments(request):
-    return render(request, 'elegant/comments.html')
-
-
 def contact(request):
     return render(request, 'elegant/contact.html')
